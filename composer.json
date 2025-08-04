@@ -1,0 +1,37 @@
+{
+    "name": "daniel/laravel-aspect",
+    "description": "efficient Laravel extension package designed to enhance development productivity. It integrates powerful annotation handling and practical helper classes, making the development of Laravel applications more convenient and flexible.",
+    "type": "library",
+    "require": {
+        "php": "^8.2 || ^8.3",
+        "laravel/framework": "^11.0 || ^12.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Daniel\\LaravelAspect\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lugege",
+            "email": "2530262el@163.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Daniel\\LaravelAspect\\Providers\\ComponentScanProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "pestphp/pest": "3.x-dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
