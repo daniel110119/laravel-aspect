@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Attributes\Routes;
+namespace Lugege\LaravelAspect\Attributes\Routes;
 
 use Attribute;
 

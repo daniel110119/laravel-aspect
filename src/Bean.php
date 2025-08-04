@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect;
+namespace Lugege\LaravelAspect;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Str;
-use Daniel\LaravelAspect\Attributes\Alias;
-use Daniel\LaravelAspect\Attributes\BeanList;
-use Daniel\LaravelAspect\Attributes\Mock;
-use Daniel\LaravelAspect\Attributes\TypeConverter;
-use Daniel\LaravelAspect\Attributes\UnionType;
-use Daniel\LaravelAspect\Exceptions\PropertyNotFoundException;
+use Lugege\LaravelAspect\Attributes\Alias;
+use Lugege\LaravelAspect\Attributes\BeanList;
+use Lugege\LaravelAspect\Attributes\Mock;
+use Lugege\LaravelAspect\Attributes\TypeConverter;
+use Lugege\LaravelAspect\Attributes\UnionType;
+use Lugege\LaravelAspect\Exceptions\PropertyNotFoundException;
 use Override;
 use ReflectionAttribute;
 use ReflectionClass;

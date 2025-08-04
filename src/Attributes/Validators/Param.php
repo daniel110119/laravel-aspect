@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Attributes\Validators;
+namespace Lugege\LaravelAspect\Attributes\Validators;
 
 use Attribute;
 

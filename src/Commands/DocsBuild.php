@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Commands;
+namespace Lugege\LaravelAspect\Commands;
 
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Daniel\LaravelAspect\Attributes\Alias;
-use Daniel\LaravelAspect\Attributes\Routes\DeleteMapping;
-use Daniel\LaravelAspect\Attributes\Routes\GetMapping;
-use Daniel\LaravelAspect\Attributes\Routes\PostMapping;
-use Daniel\LaravelAspect\Attributes\Routes\Prefix;
-use Daniel\LaravelAspect\Attributes\Routes\PutMapping;
-use Daniel\LaravelAspect\Attributes\Routes\Response;
-use Daniel\LaravelAspect\Attributes\Validators\Param;
-use Daniel\LaravelAspect\Helpers\ControllerHelper;
-use Daniel\LaravelAspect\Helpers\MarkdownHelper;
-use Daniel\LaravelAspect\Helpers\TypeScriptExampleGenerator;
-use Daniel\LaravelAspect\Helpers\VitePressConfigHelper;
+use Lugege\LaravelAspect\Attributes\Alias;
+use Lugege\LaravelAspect\Attributes\Routes\DeleteMapping;
+use Lugege\LaravelAspect\Attributes\Routes\GetMapping;
+use Lugege\LaravelAspect\Attributes\Routes\PostMapping;
+use Lugege\LaravelAspect\Attributes\Routes\Prefix;
+use Lugege\LaravelAspect\Attributes\Routes\PutMapping;
+use Lugege\LaravelAspect\Attributes\Routes\Response;
+use Lugege\LaravelAspect\Attributes\Validators\Param;
+use Lugege\LaravelAspect\Helpers\ControllerHelper;
+use Lugege\LaravelAspect\Helpers\MarkdownHelper;
+use Lugege\LaravelAspect\Helpers\TypeScriptExampleGenerator;
+use Lugege\LaravelAspect\Helpers\VitePressConfigHelper;
 use ReflectionAttribute;
 use ReflectionClass;
 use ReflectionException;

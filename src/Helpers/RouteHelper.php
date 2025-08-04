@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Helpers;
+namespace Lugege\LaravelAspect\Helpers;
 
 use Illuminate\Support\Facades\Route;
-use Daniel\LaravelAspect\Attributes\Routes\DeleteMapping;
-use Daniel\LaravelAspect\Attributes\Routes\GetMapping;
-use Daniel\LaravelAspect\Attributes\Routes\PostMapping;
-use Daniel\LaravelAspect\Attributes\Routes\PutMapping;
+use Lugege\LaravelAspect\Attributes\Routes\DeleteMapping;
+use Lugege\LaravelAspect\Attributes\Routes\GetMapping;
+use Lugege\LaravelAspect\Attributes\Routes\PostMapping;
+use Lugege\LaravelAspect\Attributes\Routes\PutMapping;
 use ReflectionAttribute;
 use ReflectionMethod;
 

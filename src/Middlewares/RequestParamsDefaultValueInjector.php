@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Middlewares;
+namespace Lugege\LaravelAspect\Middlewares;
 
 use Closure;
 use Illuminate\Http\Request;
-use Daniel\LaravelAspect\Attributes\Validators\Param;
+use Lugege\LaravelAspect\Attributes\Validators\Param;
 use ReflectionAttribute;
 use ReflectionException;
 use ReflectionMethod;

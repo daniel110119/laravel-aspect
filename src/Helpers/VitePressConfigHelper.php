@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Helpers;
+namespace Lugege\LaravelAspect\Helpers;
 
 use Illuminate\Support\Str;
 

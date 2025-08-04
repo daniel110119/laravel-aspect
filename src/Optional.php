@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect;
+namespace Lugege\LaravelAspect;
 
-use Daniel\LaravelAspect\Exceptions\NotSuchElementException;
+use Lugege\LaravelAspect\Exceptions\NotSuchElementException;
 use UnexpectedValueException;
 
 /**

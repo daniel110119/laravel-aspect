@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Helpers;
+namespace Lugege\LaravelAspect\Helpers;
 
 /**
  * Class MarkdownHelper

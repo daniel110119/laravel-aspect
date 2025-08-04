@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Base;
+namespace Lugege\LaravelAspect\Base;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Daniel\LaravelAspect\Bean;
-use Daniel\LaravelAspect\Optional;
+use Lugege\LaravelAspect\Bean;
+use Lugege\LaravelAspect\Optional;
 use ReflectionException;
 
 /**

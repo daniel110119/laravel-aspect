@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Providers;
+namespace Lugege\LaravelAspect\Providers;
 
 use Carbon\Laravel\ServiceProvider;
-use Daniel\LaravelAspect\Attributes\Component;
-use Daniel\LaravelAspect\Attributes\Logic;
-use Daniel\LaravelAspect\Attributes\Repository;
-use Daniel\LaravelAspect\Attributes\Service;
-use Daniel\LaravelAspect\Helpers\NamespaceHelpers;
+use Lugege\LaravelAspect\Attributes\Component;
+use Lugege\LaravelAspect\Attributes\Logic;
+use Lugege\LaravelAspect\Attributes\Repository;
+use Lugege\LaravelAspect\Attributes\Service;
+use Lugege\LaravelAspect\Helpers\NamespaceHelpers;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use ReflectionClass;

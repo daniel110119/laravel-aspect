@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect;
+namespace Lugege\LaravelAspect;
 
-use Daniel\LaravelAspect\Attributes\Routes\Prefix;
-use Daniel\LaravelAspect\Helpers\ControllerHelper;
-use Daniel\LaravelAspect\Helpers\RouteHelper;
+use Lugege\LaravelAspect\Attributes\Routes\Prefix;
+use Lugege\LaravelAspect\Helpers\ControllerHelper;
+use Lugege\LaravelAspect\Helpers\RouteHelper;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionMethod;

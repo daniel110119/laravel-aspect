@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect;
+namespace Lugege\LaravelAspect;
 
 enum MockType
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Attributes;
+namespace Lugege\LaravelAspect\Attributes;
 
 use Attribute;
-use Daniel\LaravelAspect\MockType;
+use Lugege\LaravelAspect\MockType;
 
 #[Attribute(Attribute::TARGET_PROPERTY)]
 class Mock

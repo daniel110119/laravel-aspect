@@ -1,6 +1,6 @@
 <?php
 
-namespace Daniel\LaravelAspect\Commands;
+namespace Lugege\LaravelAspect\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;

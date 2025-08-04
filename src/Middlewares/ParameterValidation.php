@@ -1,12 +1,12 @@
 <?php
 
-namespace Daniel\LaravelAspect\Middlewares;
+namespace Lugege\LaravelAspect\Middlewares;
 
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Daniel\LaravelAspect\Attributes\Validators\Param;
-use Daniel\LaravelAspect\Exceptions\ValidatedErrorException;
+use Lugege\LaravelAspect\Attributes\Validators\Param;
+use Lugege\LaravelAspect\Exceptions\ValidatedErrorException;
 use ReflectionAttribute;
 use ReflectionException;
 use ReflectionMethod;

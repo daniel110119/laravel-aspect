@@ -1,7 +1,7 @@
 ![PHP Version](https://img.shields.io/badge/php-%3E%3D8.1-blue.svg)
 ![Laravel Version](https://img.shields.io/badge/laravel-%3E%3D11.0-red.svg)
 
-## Daniel\LaravelAspect 
+## Lugege\LaravelAspect 
 
 
 它融合了 Java Spring Boot 的 AOP 概念，并广泛利用 PHP8 注解来简化开发流程。
@@ -15,15 +15,15 @@
 
 首先，你需要在 `api.php` 中注册，代码如下：
 ```php
-use Daniel\LaravelAspect\EasyRouter;
+use Lugege\LaravelAspect\EasyRouter;
 
 EasyRouter::register();
 ```
 
 然后，你可以在控制器方法前使用路由注解：
 ```php
-use Daniel\LaravelAspect\Attributes\Routes\GetMapping;
-use Daniel\LaravelAspect\Attributes\Routes\Prefix;
+use Lugege\LaravelAspect\Attributes\Routes\GetMapping;
+use Lugege\LaravelAspect\Attributes\Routes\Prefix;
 
 #[Prefix(path: '/user')]
 class UserController

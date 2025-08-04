@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Attributes\EventDriven;
+namespace Lugege\LaravelAspect\Attributes\EventDriven;
 
 
 use Attribute;

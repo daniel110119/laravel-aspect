@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Attributes\Requests;
+namespace Lugege\LaravelAspect\Attributes\Requests;
 
 use Attribute;
 

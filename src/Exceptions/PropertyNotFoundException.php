@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Exceptions;
+namespace Lugege\LaravelAspect\Exceptions;
 
 use Exception;
 

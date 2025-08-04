@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Traits;
+namespace Lugege\LaravelAspect\Traits;
 
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\Facades\Config;
-use Daniel\LaravelAspect\Attributes\Autowired;
-use Daniel\LaravelAspect\Attributes\Value;
+use Lugege\LaravelAspect\Attributes\Autowired;
+use Lugege\LaravelAspect\Attributes\Value;
 use ReflectionClass;
 
 trait Injectable {

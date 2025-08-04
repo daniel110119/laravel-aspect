@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Middlewares;
+namespace Lugege\LaravelAspect\Middlewares;
 
 use Closure;
 use Illuminate\Http\Request;
-use Daniel\LaravelAspect\Attributes\Requests\RequestBody;
-use Daniel\LaravelAspect\Bean;
+use Lugege\LaravelAspect\Attributes\Requests\RequestBody;
+use Lugege\LaravelAspect\Bean;
 use ReflectionException;
 use ReflectionMethod;
 use ReflectionParameter;

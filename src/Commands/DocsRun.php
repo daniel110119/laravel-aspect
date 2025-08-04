@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Daniel\LaravelAspect\Commands;
+namespace Lugege\LaravelAspect\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Process\Exceptions\ProcessFailedException;
