@@ -37,7 +37,7 @@ class ControllerHelper
             }
             if (str_contains($file->getFilename(), 'Controller.php')) {
 
-                $controllerFiles[] = $file->getPathname();
+                $controllerFiles[] = $file->getRealPath();
             }
         }
         return $controllerFiles;
