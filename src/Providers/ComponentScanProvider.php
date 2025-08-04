@@ -66,7 +66,7 @@ class ComponentScanProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/aspect_scan.php' => config_path('aspect_scan.php'),
-        ]);
+        ],'laravel-assets');
     }
 
 }
