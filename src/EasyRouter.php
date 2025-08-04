@@ -23,13 +23,10 @@ class EasyRouter
             foreach ($controllerFiles as $file) {
                 try {
                     $controller = ControllerHelper::convertPathToNamespace($file);
-
                     $reflectionClass = new ReflectionClass($controller);
-
                 } catch (ReflectionException $e) {
                     dd($e->getMessage());
                 }
-
                 $controllerPrefixAttributes = collect($reflectionClass->getAttributes(Prefix::class));
                 $prefix = $controllerPrefixAttributes->isEmpty() ? '' : RouteHelper::handleControllerPrefix($controllerPrefixAttributes->first());
 
