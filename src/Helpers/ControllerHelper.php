@@ -21,14 +21,13 @@ class ControllerHelper
      * This function is used to scan recursively through the directory provided,
      * and collect all the controller files present in it.
      *
-     * @param  string  $basePath  - The base path where the function starts scanning for controller files.
+     * @param string $basePath - The base path where the function starts scanning for controller files.
      * @return array - Returns an array containing the pathname of all the controller
      */
     public static function scanForFiles(string $basePath): array
     {
         $directoryIterator = new RecursiveDirectoryIterator($basePath);
         $recursiveIterator = new RecursiveIteratorIterator($directoryIterator);
-
         $controllerFiles = [];
         foreach ($recursiveIterator as $file) {
             /** @var SplFileInfo $file */
@@ -36,7 +35,6 @@ class ControllerHelper
                 continue;
             }
             if (str_contains($file->getFilename(), 'Controller.php')) {
-
                 $controllerFiles[] = $file->getRealPath();
             }
         }
@@ -48,7 +46,7 @@ class ControllerHelper
      * It looks for the 'Controllers' directory in the given path, replaces all directory
      * separator symbols with namespace separator symbols and removes the '.php' extension.
      *
-     * @param  string  $filePath  - The full path of the controller file that needs to be converted to a namespace.
+     * @param string $filePath - The full path of the controller file that needs to be converted to a namespace.
      * @return string - A string that constitutes the namespace for the controller file.
      */
     public static function convertPathToNamespace(string $filePath): string
