@@ -49,11 +49,15 @@ class ControllerHelper
      * @param string $filePath - The full path of the controller file that needs to be converted to a namespace.
      * @return string - A string that constitutes the namespace for the controller file.
      */
-    public static function convertPathToNamespace(string $filePath): string
+    public static function convertPathToNamespace(string $filePath): string|null
     {
+        $exclude_namespaces = config('laravel_aspect.exclude_namespaces', []);
         $startAt = strpos($filePath, 'app');
         $nameSpace = substr($filePath, $startAt);
-        $nameSpace = str_replace(DIRECTORY_SEPARATOR, '\\', $nameSpace);
-        return str_replace('.php', '', $nameSpace);
+        $nameSpace = str_replace(array(DIRECTORY_SEPARATOR, 'app','.php'), array('\\', 'App',''), $nameSpace);
+        if (in_array($nameSpace, $exclude_namespaces)) {
+            return null;
+        }
+        return $nameSpace;
     }
 }

@@ -46,8 +46,8 @@ class RouteHelper
             DeleteMapping::class => 'delete',
         ];
         foreach ($methods as $method) {
-            $attributes = collect($method->getAttributes())->filter(function (ReflectionAttribute $attribute) use ($routesMapping) {
-                return array_key_exists($attribute->getName(), $routesMapping);
+            $attributes = collect($method['attributes']??[])->filter(function ($attribute) use ($routesMapping) {
+                return array_key_exists($attribute['class']??[], $routesMapping);
             });
             if ($attributes->isEmpty()) {
                 continue;
@@ -68,11 +68,11 @@ class RouteHelper
      * @param  ReflectionMethod  $method  Instance of PHP's ReflectionMethod representing a method in the controller
      * @param  array  $routesMapping  An associative array having  class references as keys and their corresponding routings as values
      */
-    private static function mapAttributesToRoutes(ReflectionAttribute $attribute, string $prefix, string $controller, ReflectionMethod $method, array $routesMapping): void
+    private static function mapAttributesToRoutes($attribute, string $prefix, string $controller, $method, array $routesMapping): void
     {
-        $instance = $attribute->newInstance();
-        $uri = self::buildPath($prefix,$instance->path);
-        Route::{$routesMapping[$attribute->getName()]}($uri, [$controller, $method->getName()]);
+        $instance = $attribute['data']??[];
+        $uri = self::buildPath($prefix,$instance['path']??'');
+        Route::{$routesMapping[$attribute['class']]}($uri, [$controller, $method['name']]);
     }
 
     private static function buildPath(string ...$segments): string {

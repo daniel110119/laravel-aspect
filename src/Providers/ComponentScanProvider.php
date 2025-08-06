@@ -4,10 +4,13 @@ declare(strict_types=1);
 namespace Lugege\LaravelAspect\Providers;
 
 use Carbon\Laravel\ServiceProvider;
+use Illuminate\Support\Facades\Cache;
 use Lugege\LaravelAspect\Attributes\Component;
 use Lugege\LaravelAspect\Attributes\Logic;
 use Lugege\LaravelAspect\Attributes\Repository;
 use Lugege\LaravelAspect\Attributes\Service;
+use Lugege\LaravelAspect\Cache\CacheRepository;
+use Lugege\LaravelAspect\Cache\FileStore;
 use Lugege\LaravelAspect\Helpers\NamespaceHelpers;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -30,6 +33,11 @@ class ComponentScanProvider extends ServiceProvider
                 app()->singleton($interfaceClazz, fn() => $reflectionClazz->newInstance());
             }
         }
+        $this->app->singleton('laravel_aspect.cache', function ($app) {
+            $path = config('laravel_aspect.cache.cache_path',
+                storage_path('runtime/aspect/cache'));
+            return new CacheRepository(new FileStore($app['files'], $path,'0776'));
+        });
     }
 
     /**
@@ -64,9 +72,15 @@ class ComponentScanProvider extends ServiceProvider
 
     public function boot(): void
     {
+
         $this->publishes([
-            __DIR__.'/../config/aspect_scan.php' => config_path('aspect_scan.php'),
+            __DIR__.'/../config/laravel_aspect.php' => config_path('laravel_aspect.php'),
         ],'config');
+
+
+        if(config('laravel_aspect.autoRoute',false)){
+            $this->loadRoutesFrom(__DIR__.'/../Router/Route.php');
+        }
     }
 
 }
